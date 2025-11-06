@@ -94,7 +94,7 @@ export const HeaderImpresa: React.FC<HeaderImpresaProps> = ({}) => {
               className="p-2 text-zinc-400 hover:text-zinc-600 hover:bg-zinc-100 rounded-tl-3xl rounded-br-3xl mr-1"
               onClick={() => {
                 clearOrganizationStorages();
-                logout({ returnTo: process.env.REACT_APP_BASE_URL });
+                logout({ returnTo: window.origin });
               }}
             >
               LOGOUT
@@ -261,7 +261,7 @@ export const HeaderImpresa: React.FC<HeaderImpresaProps> = ({}) => {
               <a
                 onClick={() => {
                   clearOrganizationStorages();
-                  logout({ returnTo: process.env.REACT_APP_BASE_URL });
+                  logout({ returnTo: window.origin });
                 }}
               >
                 <svg
